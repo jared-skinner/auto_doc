@@ -1,7 +1,8 @@
 ---
-Setting Up an Environment
+title: Setting Up an Environment
 ---
 
+# Setting Up an Environment
 
 ## Preparation
 
@@ -17,13 +18,13 @@ Setting Up an Environment
 
 	For 32 bit compiles use Visual Studio 8:
 
-	```bat
+	```language-batch
 	SET PATH=C:\Program Files (x86)\Microsoft Visual Studio 8\VC\bin;C:\Program Files (x86)\Microsoft Visual Studio 8\VC;%PATH%
 	```
 
 	for 64 bit compiles use Visual Studio 10
 
-	```bat
+	```language-batch
 	SET PATH=C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC;C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin;%PATH%
 	```
 
@@ -53,7 +54,7 @@ Setting Up an Environment
 
 5.  Modify `monarch_xp_x64.bat` starting with `rem Set OSI path reference variables` to read the following:
 
-	```bat
+	```language-batch
 	rem Set up OSI path reference variables
 	SET OSIINET=<$OSI>\monarch
 	SET OSI=<$OSI>\monarch
@@ -71,19 +72,19 @@ Setting Up an Environment
 
 1.  Run the profile script to setup environment variables.
 
-	```bat
+	```language-batch
 	monarch_xp_x64.bat
 	```
 
 2.  From `$OSI` run the setup script to set some additional variables for compilation.
 
-	```bat
+	```language-batch
 	scripts/setup
 	```
 
 3.  Compile base and basenet
 
-	```bat
+	```language-batch
 	cd $OSI/monarch/src/base_net
 	make
 	cd $OSI/monarch/src/base
@@ -92,7 +93,7 @@ Setting Up an Environment
 
 4.  To setup licensing
 
-	```bat
+	```language-batch
 	cd $OSI/monarch/src/base/util/license/setlicense
 	make
 	cd $OSI/monarch
@@ -103,7 +104,7 @@ Setting Up an Environment
 
 5. Schema all the databases (this creates header files for many products and db files.)
 
-	```bat
+	```language-batch
 	cd $OSI
 	schema_all
 	```
@@ -112,14 +113,14 @@ Setting Up an Environment
 
 6. From `$OSI` Populate the base database files (TODO: update explaination)
 
-	```bat
+	```language-batch
 	pop_base
 	DBMS_config_set_for_net
 	```
 
 7. Compile remaining products
 
-	```bat
+	```language-batch
 	cd $OSI/monarch/src
 	make
 	```
@@ -128,7 +129,7 @@ Setting Up an Environment
 
 8. Create `osiprojectedit`
 
-	```bat
+	```language-batch
 	cd $OSI/monarch/srcNET/BaseNET
 	make
 	```
@@ -137,33 +138,33 @@ Setting Up an Environment
 
 9. If doing a 64 bit build, convert 64 bit C# files to 64 bit.
 
-	```bat
+	```language-batch
 	osiprojectedit -t x64
 	```
 
 10. Build srcNET C# projects
 
-	```bat
+	```language-batch
 	cd $OSI/monarch/srcNET
 	make
 	```
 
 11. Build Java projects
 
-	```bat
+	```language-batch
 	cd $OSI/monarch/srcJava
 	make
 	```
 
 12. I don't know what this does:
 
-	```bat
+	```language-batch
 	objserver
 	```
 
 13. Generate `osii_agent.xml` in `$OSI/monarch/profiles`
 
-	```bat
+	```language-batch
 	osii_agent
 	```
 
@@ -179,7 +180,7 @@ Setting Up an Environment
 
 17. I am not sure what this does
 
-	```bat
+	```language-batch
 	passwdutil disable
 	```
 
@@ -187,25 +188,25 @@ Setting Up an Environment
 
 19. I am not sure what this does 
 
-	```bat
+	```language-batch
 	osii_uds_import --domain <domain name> --new
 	```
 
 20. Start MonarchNet processes:
 
-	```bat
+	```language-batch
 	net_autostart
 	```
 
 21. Import states tables information
 
-	```bat
+	```language-batch
 	osii_states_converter --domain <domain name>
 	```
 
 22. I am not sure what this does
 
-	```bat
+	```language-batch
 	DisplayConverter --domain <domain name> -user admin -pwd admin -c -d -u
 	```
 
@@ -221,13 +222,13 @@ Setting Up an Environment
 
 	For 32 bit use Visual Studio 8:
 
-	```bat
+	```language-batch
 	SET PATH=C:\Program Files (x86)\Microsoft Visual Studio 8\VC\bin;C:\Program Files (x86)\Microsoft Visual Studio 8\VC;%PATH%
 	```
 
 	for 64 bit use Visual Studio 10
 
-	```bat
+	```language-batch
 	SET PATH=C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC;C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin;%PATH%
 	```
 
@@ -235,7 +236,7 @@ Setting Up an Environment
 
 2.  From `$OSI` run the monarch profile script
 
-	```bat
+	```language-batch
 	cd $OSI
 	monarch_xp_x64.bat DEBUG
 	```
@@ -244,14 +245,14 @@ Setting Up an Environment
 
 3.  From `$OSI` start MonarchNet Services:
 
-	```bat
+	```language-batch
 	scripts\net_autostart 
 	```
 
 
 3.  Start OpenViewNet
 
-	```bat
+	```language-batch
 	openviewnet -d
 	```
 
@@ -262,7 +263,7 @@ Setting Up an Environment
 
 1. Run the following:
 
-	```bat
+	```language-batch
 	osii_shutdown
 	osi_shutdown
 	```

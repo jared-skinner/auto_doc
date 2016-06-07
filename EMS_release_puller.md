@@ -1,6 +1,8 @@
 ---
-Release Puller
+title: Release Puller
 ---
+
+# Release Puller
 
 ## Summary
 
