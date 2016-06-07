@@ -1,5 +1,5 @@
 ---
-Smoke Test
+title: Smoke Test
 ---
 
 ## Introduction

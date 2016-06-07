@@ -1,5 +1,5 @@
 ---
-Optimal Power Flow
+title: Optimal Power Flow
 ---
 
 ## What is OPF?

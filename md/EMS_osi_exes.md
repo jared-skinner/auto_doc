@@ -1,5 +1,5 @@
 ---
-OSI Executables
+title: OSI Executables
 ---
 
 ## Database Stuff
