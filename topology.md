@@ -1,6 +1,5 @@
 ---
-title: Network Topology
-keywords: EMS, Topology, NT, Network Topology
+Network Topology
 ---
 
 

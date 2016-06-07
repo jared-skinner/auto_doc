@@ -1,5 +1,5 @@
 ---
-title: OpenNET definitions and processes
+OpenNET definitions and processes
 ---
 
 ## Basic Definitions

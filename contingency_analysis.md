@@ -1,7 +1,5 @@
 ---
-title: Contingency Analysis
-keywords: EMS, CA, Contingency Analysis
-last_updated: February 5th 2016
+Contingency Analysis
 ---
 
 

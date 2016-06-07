@@ -1,5 +1,5 @@
 ---
-title: Continuation Power Flow
+Continuation Power Flow
 ---
 
 The power flow equations are parameterized by a factor, say L which represents the variation of load demand.  

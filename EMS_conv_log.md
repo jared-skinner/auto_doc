@@ -1,5 +1,5 @@
 ---
-title: Logs and Reports
+Logs and Reports
 ---
 
 

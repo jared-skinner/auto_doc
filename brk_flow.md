@@ -1,7 +1,5 @@
 ---
-title: Breaker Flow
-keywords: EMS, Breaker Flow
-last_updated: February 1st 2016
+Breaker Flow
 ---
 
 ## Summary

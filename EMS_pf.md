@@ -1,7 +1,5 @@
 ---
-title: Power Flow
-keywords: EMS, Power Flow
-last_updated: January 22nd 2016
+Power Flow
 ---
 
 

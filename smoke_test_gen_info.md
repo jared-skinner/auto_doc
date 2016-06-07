@@ -1,7 +1,5 @@
 ---
-title: Smoke Test
-keywords: EMS, Power Flow
-last_updated: January 26nd 2016
+Smoke Test
 ---
 
 ## Introduction

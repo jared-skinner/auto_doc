@@ -1,5 +1,5 @@
 ---
-title: ONET SOM Development
+ONET SOM Development
 ---
 
 ##Introduction
