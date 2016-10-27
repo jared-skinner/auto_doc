@@ -1,8 +1,8 @@
 ---
-title: Setting Up an Environment
+title: Setting Up an Environment on Windows
 ---
 
-# Setting Up an Environment
+# Setting Up an Environment on Windows
 
 ## Preparation
 
@@ -10,9 +10,11 @@ title: Setting Up an Environment
 
 2.  Create the following three directories
 
-		$OSI\monarch
-		$OSI\osi_cust
-		$OSI\products
+	```language-batch
+	$OSI\monarch
+	$OSI\osi_cust
+	$OSI\products
+	```
 
 3.  Make sure the correct version of *Visual Studio* is in your path.
 

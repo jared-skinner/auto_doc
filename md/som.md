@@ -179,8 +179,8 @@ A new generic messaging adaptor will be written using gserver.  It will take the
 *******************************************************************************/
 void gserver_main()
 {
-	char * som_commands[], * poa_commands[];
-	GSERVER_DATA_CALLBACK som_callbacks[], poa_callbacks[];
+	char * som_commands[ ], * poa_commands[ ];
+	GSERVER_DATA_CALLBACK som_callbacks[ ], poa_callbacks[ ];
 	OSI_BOOL msg_online = false;
 
 	//initialize callback strings
@@ -270,7 +270,7 @@ void register_callbacks()
 	som_prop->add(som_prop, "command2", callback2, NULL);
 }
 
-void gserver_process_argv(int argc, char * argv[])
+void gserver_process_argv(int argc, char * argv[ ])
 {
 	// Set the number of threads in the thread pool
 

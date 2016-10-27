@@ -12,6 +12,7 @@ Release Puller is a python tool devloped by Sam Handler for getting product sour
 
 There is a file inside of the releasepuller root directory called ReleasePuller.rc which 
 
+This file can accept any command known to release puller.  Because of this ReleasePuller.rc can be used as a way to script the build process.  
 
 ## Usage
 
