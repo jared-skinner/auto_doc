@@ -1,3 +1,9 @@
 body {
 	background-color: #FFFBF2
 }
+
+thead
+{
+	background-color: #444;
+	color: #999;
+}
