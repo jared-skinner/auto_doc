@@ -1,5 +1,8 @@
 #!/usr/bin/python3
 
+#TODO: Update so images are pulled from the md dir
+
+
 import os
 from subprocess import call
 import time
@@ -104,6 +107,6 @@ else:
             for file in filenames:
                 if os.path.getmtime(md_dir + file) > current_time:
                     if re.search("md$", file):
-                        print(file + ": updating html")
+                        print(time.strftime("%H:%M:%S") + "    " + file + ": updating html")
                         update_file(file)
             current_time = time.time()
