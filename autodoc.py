@@ -9,6 +9,7 @@ import time
 import markdown2
 import re
 import sys
+import argparse
 
 root_dir = os.path.dirname(os.path.realpath(__file__))
 md_dir = root_dir + '/md/'
@@ -43,70 +44,26 @@ def update_file(file_name):
     out = header + nav_html + markdown + footer
     output.write(out)
 
+parser = argparse.ArgumentParser(description='Automatically generates html for documentation from markdown.  If no option is given, this script will continually check for updates in the md directory and will update the html files accordingly', prog='autodoc.py')
+parser.add_argument('-v', '--version', action='version', version='%(prog)s 0.0.2.0')
+parser.add_argument('-f', help='Update single file')
+parser.add_argument('-a', help='Update single file', action='store_true')
+args = parser.parse_args()
 
-def usage():
-    print("\nDocumentation Generator\n")
-    print("python update_md.py [Options]\n")
-    print("Options:\n")
-    print(" -h                         Print this help message")
-    print(" -v                         Print version information")
-    print(" -f <file name>             update specified file\n")
-    print(" -a                         Update all files\n")
-    print(" If no option is given this script will continually check for updates")
-    print(" the the md directory and will update the html files accordingly\n")
-
-
-def version():
-    print("\nDocumentation Generator       Version 0.0.1.0\n")
-
-
-merge_version = ""
-assign = False
-merge = False
-documentation = False
-users_guide = False
-test_procedures = False
-config_guide = False
-design_description = False
-issue = ""
-
-argc = len(sys.argv)
-
-all = False
-file = False
-file_name = ""
-if len(sys.argv) > 1:
-    for index, arg in enumerate(sys.argv):
-        if arg == '-h':
-            usage()
-            exit()
-
-        if arg == '-v':
-            version()
-            exit()
-
-        if arg == '-a':
-            all = True
-
-        if arg == '-f':
-            file = True
-            file_name = sys.argv[index + 1]
-
-if all:
+if args.a:
     print("Updating all html")
     for root, dirs, filenames in os.walk(md_dir):
         for file in filenames:
             if re.search("md$", file):
                 update_file(file)
-elif file:
-    update_file(file_name)
+elif args.f:
+    update_file(args.f)
 else:
     while True:
         time.sleep(1)
         for root, dirs, filenames in os.walk(md_dir):
             for file in filenames:
-                if os.path.getmtime(md_dir + file) > current_time:
-                    if re.search("md$", file):
-                        print(time.strftime("%H:%M:%S") + "    " + file + ": updating html")
-                        update_file(file)
+                if os.path.getmtime(md_dir + file) > current_time and re.search("md$", file):
+                    print(time.strftime("%H:%M:%S") + "    " + file + ": updating html")
+                    update_file(file)
             current_time = time.time()
